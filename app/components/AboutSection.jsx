@@ -53,15 +53,16 @@ const AboutSection = () => {
   return (
     <section id='about' className='text-white'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16'>
-            <Image src="/images/pc.jpg" width={500} height={500} />
+        <Image src="/images/pc.jpg" width={500} height={500} alt="A description of the image" />
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                 <p className='text-base lg:text-lg'>
-                    I'm a self taught frontend developer and a computer science undergrad. I design interactive, responsive user friendly websites. 
-                   I focus on beautiful web interfaces, responsive designs, interactivity,
-                   testing, debugging and crafting a unique user experience.
-                   My journey is fueled by a relentless pursuit of enhancing my skill. 
-                   </p>
+    I&apos;m a self-taught frontend developer and a computer science undergrad. I design interactive, responsive, user-friendly websites. 
+    I focus on beautiful web interfaces, responsive designs, interactivity,
+    testing, debugging, and crafting a unique user experience.
+    My journey is fueled by a relentless pursuit of enhancing my skills. 
+</p>
+
                    <div className="flex flex-row justify-start mt-8">
                     <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
                         {" "}
