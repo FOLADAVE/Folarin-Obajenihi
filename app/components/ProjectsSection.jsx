@@ -57,8 +57,8 @@ const projectsData = [
       description: "Todo-list application",
       image: "/images/projects/6.png",
       tag: ["All", "Web"],
-      gitUrl: "https://foladave.github.io/Edusity-site/",
-      previewUrl: "https://foladave.github.io/Edusity-site/",
+      gitUrl: "https://github.com/FOLADAVE/Todo-list-app",
+      previewUrl: "https://todo-list-app-git-main-folarins-projects-a9ebab5e.vercel.app/",
     },
 ];
 
