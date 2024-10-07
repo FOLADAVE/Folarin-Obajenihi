@@ -10,7 +10,7 @@ const Contact = () => {
     <div className='contact' id='contact'>
 
         <div className="contact-col">
-            <h3>Let's connect</h3>
+            <h3>Let&apos;s connect</h3>
             <p>I&apos;m currently looking for new opportunities, my inbox is always open.</p>
             <ul>
             <div className="socials flex flex-row gap-1 mt-3 ml-[-10px]">
