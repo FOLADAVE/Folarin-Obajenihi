@@ -17,7 +17,7 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 via-green-300 to-green-400">
-              Hello, I'm {""}
+              Hello, I&apos;m {""}
             </span>
             <br></br>
             <TypeAnimation
@@ -38,7 +38,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Most days, I'm crafting stunning web pages that provide exceptional user experiences.
+          Most days, I&apos;m crafting stunning web pages that provide exceptional user experiences.
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-800 via-green-400 to-green-300  hover:bg-slate-200 text-white">
