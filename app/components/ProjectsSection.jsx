@@ -31,7 +31,7 @@ const projectsData = [
       image: "/images/projects/22.png",
       tag: ["All", "Web", "Mobile"],
       gitUrl: "https://github.com/FOLADAVE/Oma-diction",
-      previewUrl: "https://omadiction.pro/",
+      previewUrl: "http://www.omadiction.pro/",
     },
     {
       id: 4,
