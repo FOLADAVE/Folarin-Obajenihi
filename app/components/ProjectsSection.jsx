@@ -21,7 +21,7 @@ const projectsData = [
       description: "Project 2 description",
       image: "/images/projects/2.png",
       tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Edusity-site.git",
+      gitUrl: "https://github.com/FOLADAVE/Demeats",
       previewUrl: "https://foladave.github.io/Demeats/",
     },
     {
@@ -35,12 +35,12 @@ const projectsData = [
     },
     {
       id: 4,
-      title: "Edusity Website",
+      title: "Calisity Website",
       description: "Project 4 description",
       image: "/images/projects/2.png",
       tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Edusity-site.git",
-      previewUrl: "/https://foladave.github.io/Edusity-site/",
+      gitUrl: "https://github.com/FOLADAVE/Calisity",
+      previewUrl: "https://calisity.vercel.app/",
     },
     {
       id: 5,
