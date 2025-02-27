@@ -37,7 +37,7 @@ const projectsData = [
       id: 4,
       title: "Calisity Website",
       description: "Project 4 description",
-      image: "/images/projects/gallery-1.png",
+      image: "/images/assets/gallery-1.png",
       tag: ["All", "Web", "Mobile"],
       gitUrl: "https://github.com/FOLADAVE/Calisity",
       previewUrl: "https://calisity.vercel.app/",
