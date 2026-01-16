@@ -14,7 +14,7 @@ const Contact = () => {
             <p>I&apos;m currently available for frontend developer positions where I can contribute to building great products.</p>
             <p className='pt-2'>What I&apos;m looking for:
 <div className='space-y-2'>
-  <ol>- Full-time frontend developer role (remote or Lagos-based)</ol>
+  <ol>- Full-time frontend developer role</ol>
 <ol>- Opportunity to work with modern tech stack (Next.js, React)</ol>
 <ol>- Collaborative team environment</ol>
 </div>

@@ -54,7 +54,34 @@ const AboutSection = () => {
   return (
     <section id='about' className='text-white'>
         <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16'>
-        <Image src="/images/pc.jpg" width={500} height={500} alt="A description of the image"  className='pb-4'/>
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-800/20 via-green-400/20 to-green-300/20 blur-2xl rounded-xl"></div>
+              
+              {/* Image container */}
+              <div className="relative rounded-xl overflow-hidden border-2 border-green-400/20 shadow-2xl hover:border-green-400/40 transition-all duration-300 group">
+                <Image
+                  src="/images/pc.jpg"
+                  alt="Developer workspace"
+                  width={450}
+                  height={300}
+                  className="object-cover w-full h-auto"
+                />
+                
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <p className="text-white font-semibold text-lg">My Development Setup</p>
+                </div>
+              </div>
+
+              {/* "Available for Work" Badge */}
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+                <div className="bg-gradient-to-r from-blue-800 to-green-400 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+                  <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
+                  <p className="text-sm font-bold">Available for Work</p>
+                </div>
+              </div>
+            </div>
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                 <p className='text-base lg:text-lg'>
