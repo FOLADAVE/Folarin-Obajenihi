@@ -11,10 +11,12 @@ const TAB_DATA = [
             <ul className='list-disc pl-2 space-y-3'>
                 <li><span className='font-bold'>Frontend</span>:
 Next.js 14 (App Router) • React 18 • JavaScript (ES6+) • HTML5 • CSS3</li>
-                <li><span className='font-bold'>Styling:</span> 
+                <li><span className='font-bold'>Styling</span>:
 Tailwind CSS • Responsive Design • Mobile-First Development</li>
-                <li><span className='font-bold'>Tools & Workflow:</span> 
+                <li><span className='font-bold'>Tools & Workflow</span>:
 Git/GitHub • Vercel Deployment • Performance Optimization</li>
+                <li><span className='font-bold'>API&apos;s & Authentication</span>:
+Next Auth • Google Sheet API</li>
                 <li><span className='font-bold'>Currently Learning</span>: Typescript</li>
             </ul>
         ),

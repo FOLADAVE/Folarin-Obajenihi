@@ -25,7 +25,7 @@ const projectsData = [
     tag: ["All", "Web", "Client"],
     gitUrl: "https://github.com/FOLADAVE/Windmill-Pub",
     previewUrl: "https://www.thewindmillpub.co.uk/",
-    techStack: ["Next.js", "React", "Tailwind CSS"],
+    techStack: ["Next.js", "React","Next Auth", "Google Sheet API", "Tailwind CSS"],
     isClientProject: true,
   },
   
