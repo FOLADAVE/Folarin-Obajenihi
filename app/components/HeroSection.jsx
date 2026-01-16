@@ -41,14 +41,18 @@ const HeroSection = () => {
           Most days, I&apos;m crafting stunning web pages that provide exceptional user experiences.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-800 via-green-400 to-green-300  hover:bg-slate-200 text-white">
-              Hire Me
-            </button>
+            <a href="mailto:folarinobajenihi@gmail.com">
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-800 via-green-400 to-green-300  hover:bg-slate-200 text-white">
+                Hire Me
+              </button>
+            </a>
+            <a href="https://www.linkedin.com/in/folarin-obajenihi-b49a93384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-green-300 via-green-400 to-blue-800 hover:bg-slate-800 text-white mt-3 lg:mt-0">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                Linkedin
               </span>
             </button>
+            </a>
           </div>
         </motion.div>
         <motion.div

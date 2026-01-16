@@ -16,7 +16,7 @@ export default function Home() {
 
         <link rel="icon" href="public\images\assets\location-icon.png" /> {/* Add favicon */}
       </Head>
-      <main className="flex min-h-screen flex-col bg-[#0c0c0c]">
+      <main className="flex min-h-screen flex-col bg-gradient-to-br from-[#010528] to-[#004B8E]">
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />

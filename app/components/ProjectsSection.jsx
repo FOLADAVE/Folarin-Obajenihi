@@ -5,61 +5,75 @@ import ProjectTag from './ProjectTag';
 import { animate, motion, useInView } from 'framer-motion';
 
 const projectsData = [
+  // CLIENT PROJECTS - Featured at top
+  {
+    id: 1,
+    title: "Diction Oracle",
+    description: "Professional website for speech training service with responsive design and contact system",
+    image: "/images/projects/22.png",
+    tag: ["All", "Web", "Client"],
+    gitUrl: "https://github.com/FOLADAVE/Oma-diction",
+    previewUrl: "http://www.omadiction.pro/",
+    techStack: ["Next.js", "React", "Tailwind CSS"],
+    isClientProject: true,
+  },
+  {
+    id: 2,
+    title: "The Windmill Pub Hitchin",
+    description: "Full-featured food delivery platform with menu browsing, cart management, and order tracking",
+    image: "/images/assets/windill-pub.png",
+    tag: ["All", "Web", "Client"],
+    gitUrl: "https://github.com/FOLADAVE/Windmill-Pub",
+    previewUrl: "https://www.thewindmillpub.co.uk/",
+    techStack: ["Next.js", "React", "Tailwind CSS"],
+    isClientProject: true,
+  },
   
-    {
-      id: 1,
-      title: "Crackbucks Website",
-      description: "Free coffee is a tap away",
-      image: "/images/projects/1.png",
-      tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Crackbucks",
-      previewUrl: "https://foladave.github.io/Crackbucks/",
-    },
-    {
-      id: 2,
-      title: "Demeats Webiste",
-      description: "Project 2 description",
-      image: "/images/projects/2.png",
-      tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Demeats",
-      previewUrl: "https://foladave.github.io/Demeats/",
-    },
-    {
-      id: 4,
-      title: "Diction Oracle",
-      description: "Speech training",
-      image: "/images/projects/22.png",
-      tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Oma-diction",
-      previewUrl: "http://www.omadiction.pro/",
-    },
-    {
-      id: 4,
-      title: "Calisity Website",
-      description: "Project 4 description",
-      image: "/images/assets/gallery-1.png",
-      tag: ["All", "Web", "Mobile"],
-      gitUrl: "https://github.com/FOLADAVE/Calisity",
-      previewUrl: "https://calisity.vercel.app/",
-    },
-    {
-      id: 5,
-      title: "Shopwave E-commerce Website",
-      description: "Cart website",
-      image: "/images/projects/5.png",
-      tag: ["All", "Web"],
-      gitUrl: "https://github.com/FOLADAVE/Shopwave",
-      previewUrl: "https://shopwave-neon.vercel.app/",
-    },
-    {
-      id: 6,
-      title: "Next.js Todo-list App",
-      description: "Todo-list application",
-      image: "/images/projects/6.png",
-      tag: ["All", "Web"],
-      gitUrl: "https://github.com/FOLADAVE/Todo-list-app",
-      previewUrl: "https://todo-list-app-git-main-folarins-projects-a9ebab5e.vercel.app/",
-    },
+  // PERSONAL PROJECTS
+  {
+    id: 3,
+    title: "Demeats website",
+    description: "Food delivery website with menu, cart templates",
+    image: "/images/projects/2.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/FOLADAVE/Demeats",
+    previewUrl: "https://foladave.github.io/Demeats/",
+    techStack: ["React", "Tailwind CSS"],
+    isClientProject: false,
+  },
+  {
+    id: 4,
+    title: "Crackbucks Website",
+    description: "Modern coffee shop website with menu display and location finder",
+    image: "/images/projects/1.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/FOLADAVE/Crackbucks",
+    previewUrl: "https://foladave.github.io/Crackbucks/",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    isClientProject: false,
+  },
+  {
+    id: 5,
+    title: "Calisity Website",
+    description: "Fitness and wellness platform with class schedules and membership management",
+    image: "/images/projects/calisity.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/FOLADAVE/Calisity",
+    previewUrl: "https://calisity.vercel.app/",
+    techStack: ["React", "Tailwind CSS"],
+    isClientProject: false,
+  },
+  {
+    id: 6,
+    title: "Grid Clash",
+    description: "A react based tic-tac-toe game with score tracking and reset functionality",
+    image: "/images/projects/preview.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/FOLADAVE/Grid-Clash",
+    previewUrl: "https://grid-clash-nine.vercel.app/",
+    techStack: ["React", "Tailwind CSS"],
+    isClientProject: false,
+  },
 ];
 
 const ProjectsSection = () => {
@@ -81,45 +95,98 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id='projects'>
-<h2 class="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">My Projects</h2>
-<div className='text-white flex flex-row justify-center gap-2 py-6'>
-<ProjectTag 
- onClick={handleTagChange}
- name="All" 
- isSelected={tag === "All"} 
-/>
-<ProjectTag 
- onClick={handleTagChange}
- name="Web" 
- isSelected={tag === "Web"} 
-/>
-<ProjectTag 
- onClick={handleTagChange}
- name="Mobile" 
- isSelected={tag === "Mobile"} 
-/>
-</div>
-      <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-        {filteredProjects.map((project, index) => (
-          <motion.li 
-          key={index}
-          variants={cardVariants} 
-          initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 0.3, delay: index * 0.4}}
-           >
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
-          </motion.li>
-        ))}
-      </ul>
+    <section id='projects' className='py-8'>
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4">
+        My Projects
+      </h2>
+      <p className="text-[#ADB7BE] text-center mb-8 max-w-2xl mx-auto">
+        A collection of production websites and applications I&apos;ve built using modern web technologies
+      </p>
+      
+      <div className='text-white flex flex-row justify-center gap-2 py-6'>
+        <ProjectTag 
+          onClick={handleTagChange}
+          name="All" 
+          isSelected={tag === "All"} 
+        />
+        <ProjectTag 
+          onClick={handleTagChange}
+          name="Client" 
+          isSelected={tag === "Client"} 
+        />
+        <ProjectTag 
+          onClick={handleTagChange}
+          name="Web" 
+          isSelected={tag === "Web"} 
+        />
+      </div>
+
+      {/* Featured Client Work Section */}
+      {tag === "All" && (
+        <div className='mb-12'>
+          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+              Featured
+            </span>
+            Client Work
+          </h3>
+          <ul className='grid md:grid-cols-2 gap-8 md:gap-12'>
+            {projectsData
+              .filter(project => project.isClientProject)
+              .map((project, index) => (
+                <motion.li 
+                  key={project.id}
+                  variants={cardVariants} 
+                  initial="initial"
+                  animate={isInView ? "animate" : "initial"}
+                  transition={{ duration: 0.3, delay: index * 0.2}}
+                >
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    imgUrl={project.image}
+                    gitUrl={project.gitUrl}
+                    previewUrl={project.previewUrl}
+                    techStack={project.techStack}
+                    isClientProject={project.isClientProject}
+                  />
+                </motion.li>
+              ))}
+          </ul>
+        </div>
+      )}
+
+      {/* All Projects or Filtered Projects */}
+      <div className='mb-8'>
+        {tag === "All" && (
+          <h3 className="text-2xl font-bold text-white mb-6">
+            Personal Projects
+          </h3>
+        )}
+        <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
+          {filteredProjects
+            .filter(project => tag === "All" ? !project.isClientProject : true)
+            .map((project, index) => (
+              <motion.li 
+                key={project.id}
+                variants={cardVariants} 
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 0.3, delay: index * 0.4}}
+              >
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  imgUrl={project.image}
+                  gitUrl={project.gitUrl}
+                  previewUrl={project.previewUrl}
+                  techStack={project.techStack}
+                  isClientProject={project.isClientProject}
+                />
+              </motion.li>
+            ))}
+        </ul>
+      </div>
     </section>
   );
 };

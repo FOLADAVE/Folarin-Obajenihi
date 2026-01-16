@@ -11,7 +11,14 @@ const Contact = () => {
 
         <div className="contact-col">
             <h3>Let&apos;s connect</h3>
-            <p>I&apos;m currently looking for new opportunities, my inbox is always open.</p>
+            <p>I&apos;m currently available for frontend developer positions where I can contribute to building great products.</p>
+            <p className='pt-2'>What I&apos;m looking for:
+<div className='space-y-2'>
+  <ol>- Full-time frontend developer role (remote or Lagos-based)</ol>
+<ol>- Opportunity to work with modern tech stack (Next.js, React)</ol>
+<ol>- Collaborative team environment</ol>
+</div>
+</p>
             <ul>
             <div className="socials flex flex-row gap-1 mt-3 ml-[-10px]">
   <a href="mailto:folarinobajenihi@gmail.com">
