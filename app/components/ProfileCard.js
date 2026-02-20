@@ -15,7 +15,7 @@ export default function ProfileCard() {
     >
       <div className="flex flex-col items-center text-center ">
         <img
-          src="/fola-dev.jpg"
+          src="/images/Fola-dev.jpg"
           alt="Folarin Obajenihi"
           className="w-24 h-24 rounded-full mb-4 border-4 border-zinc-800 object-cover"
         />
