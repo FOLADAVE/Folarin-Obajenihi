@@ -47,21 +47,28 @@ const Contact = () => {
             </ul>
         </div>
         <div className="contact-col">
-            <form action='https://submit-form.com/Bcy2VqGgA'>
-                <label>Your name</label>
-                <input type="text" name='name' placeholder='Enter your name' required/>
-                <label>Phone Number</label>
-                <input type="tel" name='phone' placeholder='Enter your mobile number' required/>
-                <label>Write your messages here</label>
-                <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
-<button
-  type="submit"
-  className="bg-green-500 hover:bg-green-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+           <form
+  action="https://formspree.io/f/xkovvaeb"
+  method="POST"
 >
-  Send Message
-</button>
-
-            </form>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Name" required="" />
+  <label for="email">Email</label>
+ <input type="email" id="email" name="email" placeholder="Email" required="" />
+  <label for="message">Message</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Message"
+    required=""
+  ></textarea>
+  <button
+    type="submit"
+    className="bg-green-500 hover:bg-green-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+  >
+    Send Message
+  </button>
+</form>
             
         </div>
     </div>
