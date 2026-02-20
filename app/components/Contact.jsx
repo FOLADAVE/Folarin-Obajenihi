@@ -47,7 +47,7 @@ const Contact = () => {
             </ul>
         </div>
         <div className="contact-col">
-            <form action='https://submit-form.com/ct0CslQES'>
+            <form action='https://submit-form.com/Bcy2VqGgA'>
                 <label>Your name</label>
                 <input type="text" name='name' placeholder='Enter your name' required/>
                 <label>Phone Number</label>
