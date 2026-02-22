@@ -16,7 +16,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, techStack
       >
         {/* Client Project Badge */}
         {isClientProject && (
-          <div className="absolute top-3 right-3 z-10">
+          <div className="absolute top-3 right-3" style={{ zIndex: 9 }}>
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
               CLIENT PROJECT
             </span>

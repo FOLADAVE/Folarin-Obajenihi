@@ -77,7 +77,7 @@ const AboutSection = () => {
               </div>
 
               {/* "Available for Work" Badge */}
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-0">
                 <div className="bg-gradient-to-r from-blue-800 to-green-400 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
                   <p className="text-sm font-bold">Available for Work</p>
