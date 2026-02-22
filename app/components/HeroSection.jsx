@@ -87,13 +87,13 @@ const HeroSection = () => {
           <div className="relative w-full max-w-[450px] mx-auto">
             
             {/* Code Icon - Floating on top */}
-            <div className="relative z-10 mb-6">
+            <div className="relative z-0 mb-6">
               <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] mx-auto relative">
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-800/30 via-green-400/30 to-green-300/30 blur-2xl animate-pulse"></div>
                 
                 {/* Icon container */}
-                <div className="relative w-full h-full rounded-full bg-gradient-to-br from-[#1a1a2e] to-[#0f0f1e] border-2 border-green-400/30 flex items-center justify-center shadow-2xl">
+                  <div className="relative w-full h-full rounded-full bg-gradient-to-br from-[#1a1a2e] to-[#0f0f1e] border-2 border-green-400/30 flex items-center justify-center shadow-2xl z-0">
                   <Image
                     src="/images/code.png"
                     alt="Code illustration"
