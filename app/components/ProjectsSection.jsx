@@ -32,13 +32,13 @@ const projectsData = [
   // PERSONAL PROJECTS
   {
     id: 3,
-    title: "Demeats website",
-    description: "Food delivery website with menu, cart templates",
-    image: "/images/projects/2.png",
+    title: "Veltro — Business Analytics, Simplified",
+    description: "Veltro is a modern SaaS dashboard for tracking revenue, users, and business growth in one place.",
+    image: "/images/projects/veltro.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/FOLADAVE/Demeats",
-    previewUrl: "https://foladave.github.io/Demeats/",
-    techStack: ["React", "Tailwind CSS"],
+    gitUrl: "https://github.com/FOLADAVE/veltro",
+    previewUrl: "https://veltro-plum.vercel.app/",
+    techStack: ["Next.js 14", "Supabase", "Tailwind CSS", "Stripe", "Recharts"],
     isClientProject: false,
   },
   {
