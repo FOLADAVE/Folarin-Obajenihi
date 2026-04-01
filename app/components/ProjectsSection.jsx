@@ -38,7 +38,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/FOLADAVE/veltro",
     previewUrl: "https://veltro-plum.vercel.app/",
-    techStack: ["Next.js 14", "Supabase", "Tailwind CSS", "Stripe", "Recharts"],
+    techStack: ["Next.js 14", "Supabase", "TypeScript", "Tailwind CSS", "Stripe", "Recharts"],
     isClientProject: false,
   },
   {
