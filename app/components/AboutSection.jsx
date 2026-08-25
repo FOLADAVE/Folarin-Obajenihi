@@ -10,14 +10,14 @@ const TAB_DATA = [
         content: (
             <ul className='list-disc pl-2 space-y-3'>
                 <li><span className='font-bold'>Frontend</span>:
-Next.js 14 (App Router) • React 18 • JavaScript (ES6+) • HTML5 • CSS3</li>
+Next.js 14 · React 18 · JavaScript (ES6+) · TypeScript · HTML5 · CSS3</li>
                 <li><span className='font-bold'>Styling</span>:
 Tailwind CSS • Responsive Design • Mobile-First Development</li>
                 <li><span className='font-bold'>Tools & Workflow</span>:
 Git/GitHub • Vercel Deployment • Performance Optimization</li>
                 <li><span className='font-bold'>API&apos;s & Authentication</span>:
 Next Auth • Google Sheet API</li>
-                <li><span className='font-bold'>Currently Learning</span>: Typescript</li>
+                <li><span className='font-bold'>Currently Learning</span>: Supabase & React Native</li>
             </ul>
         ),
     },
@@ -27,7 +27,7 @@ Next Auth • Google Sheet API</li>
         content: (
             <ul className='list-disc pl-2'>
                 <li>National Open University of Nigeria</li>
-                <li>Freecode camp</li>
+                <li>Freecodecamp</li>
             </ul>
         ),
     },
