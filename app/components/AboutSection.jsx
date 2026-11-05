@@ -1,116 +1,159 @@
 "use client";
-import React, { useTransition, useState } from 'react';
-import Image from 'next/image';
-import TabButton from './TabButton';
+import React, { useTransition, useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import TabButton from "./TabButton";
+
+const chip =
+  "rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200";
+
+const SKILL_GROUPS = [
+  { label: "Frontend", items: ["Next.js 14", "React 18", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"] },
+  { label: "Styling", items: ["Tailwind CSS", "Responsive Design", "Mobile-First"] },
+  { label: "Tools & Workflow", items: ["Git/GitHub", "Vercel Deployment", "Performance Optimization"] },
+  { label: "APIs & Auth", items: ["NextAuth", "Google Sheets API"] },
+  { label: "Currently Learning", items: ["Supabase", "React Native"] },
+];
 
 const TAB_DATA = [
-    {
-        title: "Skills",
-        id: "skills",
-        content: (
-            <ul className='list-disc pl-2 space-y-3'>
-                <li><span className='font-bold'>Frontend</span>:
-Next.js 14 · React 18 · JavaScript (ES6+) · TypeScript · HTML5 · CSS3</li>
-                <li><span className='font-bold'>Styling</span>:
-Tailwind CSS • Responsive Design • Mobile-First Development</li>
-                <li><span className='font-bold'>Tools & Workflow</span>:
-Git/GitHub • Vercel Deployment • Performance Optimization</li>
-                <li><span className='font-bold'>API&apos;s & Authentication</span>:
-Next Auth • Google Sheet API</li>
-                <li><span className='font-bold'>Currently Learning</span>: Supabase & React Native</li>
-            </ul>
-        ),
-    },
-    {
-        title: "Education",
-        id: "education",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>National Open University of Nigeria</li>
-                <li>Freecodecamp</li>
-            </ul>
-        ),
-    },
-   {
-        title: "Certifications",
-        id: "certifications",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>Responsive Web Design Certification</li>
-                <li>Legacy Javascript Algorithms and Data Structures Certification</li>
-            </ul>
-        ),
-    },
-]
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <div className="space-y-4">
+        {SKILL_GROUPS.map((g) => (
+          <div key={g.label}>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">{g.label}</p>
+            <div className="flex flex-wrap gap-2">
+              {g.items.map((i) => (
+                <span key={i} className={chip}>{i}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="space-y-3 text-sm text-slate-200">
+        {["National Open University of Nigeria", "freeCodeCamp"].map((e) => (
+          <li key={e} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            {e}
+          </li>
+        ))}
+      </ul>
+    ),
+  },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="space-y-3 text-sm text-slate-200">
+        {[
+          "Responsive Web Design Certification",
+          "Legacy JavaScript Algorithms and Data Structures Certification",
+        ].map((c) => (
+          <li key={c} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            {c}
+          </li>
+        ))}
+      </ul>
+    ),
+  },
+];
+
+const highlights = [
+  { value: "4+", label: "Years building for the web" },
+  { value: "Client", label: "Production-ready projects" },
+  { value: "B.Sc.", label: "Computer Science (in progress)" },
+];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
-    const [isPending, startTransition] = useTransition();
+  const [tab, setTab] = useState("skills");
+  const [, startTransition] = useTransition();
 
-    const handleTabChange = (id) => {
-        startTransition(() => {
-            setTab(id);
-        });
-    }
+  const handleTabChange = (id) => {
+    startTransition(() => setTab(id));
+  };
 
   return (
-    <section id='about' className='text-white'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16'>
-            <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-800/20 via-green-400/20 to-green-300/20 blur-2xl rounded-xl"></div>
-              
-              {/* Image container */}
-              <div className="relative rounded-xl overflow-hidden border-2 border-green-400/20 shadow-2xl hover:border-green-400/40 transition-all duration-300 group">
-                <Image
-                  src="/images/pc.jpg"
-                  alt="Developer workspace"
-                  width={450}
-                  height={300}
-                  className="object-cover w-full h-auto"
-                />
-                
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white font-semibold text-lg">My Development Setup</p>
-                </div>
-              </div>
-
-              {/* "Available for Work" Badge */}
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-0">
-                <div className="bg-gradient-to-r from-blue-800 to-green-400 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
-                  <p className="text-sm font-bold">Available for Work</p>
-                </div>
-              </div>
+    <section id="about" className="py-16 text-white">
+      <div className="grid items-center gap-12 lg:grid-cols-2 xl:gap-16">
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative"
+        >
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/20 via-emerald-400/20 to-emerald-300/10 blur-2xl" />
+          <div className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl transition-colors duration-300 hover:border-emerald-400/40">
+            <Image
+              src="/images/pc.jpg"
+              alt="Developer workspace"
+              width={600}
+              height={420}
+              className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <p className="text-lg font-semibold">My Development Setup</p>
             </div>
-            <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
-                <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-                <p className='text-base lg:text-lg'>
-I&apos;m a frontend developer with 4 years of experience building modern web applications using Next.js, React, and JavaScript.
- I&apos;ve worked with clients to deliver production-ready products, including a food delivery platform and business service websites. 
- I focus on building responsive, fast-loading interfaces with clean, maintainable code, and I&apos;m currently pursuing Computer Science while creating solutions to real-world problems.
-</p>
+          </div>
+          <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-emerald-400/30 bg-[#0b1136] px-5 py-2 shadow-lg">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+            <p className="text-xs font-semibold text-emerald-300">Available for work</p>
+          </div>
+        </motion.div>
 
-                   <div className="flex flex-row justify-start mt-8">
-                    <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
-                        {" "}
-                        Skills{" "}
-                    </TabButton>
-                    <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>
-                        {" "}
-                        Education{" "}
-                    </TabButton>
-                    <TabButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>
-                        {" "}
-                        Certifications{" "}
-                    </TabButton>
-                   </div>
-                   <div className='mt-8'>{TAB_DATA.find((t) => t.id === tab).content}</div>
-            </div>
-        </div>
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex flex-col"
+        >
+          <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+            <span className="h-px w-8 bg-emerald-400" />
+            About
+          </p>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">About me</h2>
+          <p className="leading-relaxed text-slate-300 lg:text-lg">
+            I&apos;m a frontend developer with 4 years of experience building modern web applications
+            using Next.js, React, and JavaScript. I&apos;ve worked with clients to deliver
+            production-ready products, including a food delivery platform and business service
+            websites. I focus on responsive, fast-loading interfaces with clean, maintainable code,
+            and I&apos;m currently pursuing Computer Science while building solutions to real-world
+            problems.
+          </p>
+
+          <div className="mt-8 grid grid-cols-3 gap-3">
+            {highlights.map((h) => (
+              <div key={h.label} className="rounded-xl border border-white/10 bg-white/5 p-4">
+                <p className="text-xl font-bold text-white">{h.value}</p>
+                <p className="mt-1 text-xs leading-snug text-slate-400">{h.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-row justify-start">
+            {TAB_DATA.map((t) => (
+              <TabButton key={t.id} selectTab={() => handleTabChange(t.id)} active={tab === t.id}>
+                {t.title}
+              </TabButton>
+            ))}
+          </div>
+          <div className="mt-6 min-h-[220px]">{TAB_DATA.find((t) => t.id === tab).content}</div>
+        </motion.div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

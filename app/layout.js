@@ -8,12 +8,13 @@ const lato = Lato({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://folarin-obajenihi.vercel.app"),
   title: {
     default: "Folarin Obajenihi | Frontend Developer | Next.js, React, TypeScript",
     template: "%s | Folarin Obajenihi"
   },
   description:
-    "Frontend developer with 3+ years of experience building responsive web applications using Next.js, React, and JavaScript. Delivered production websites for clients including food delivery platforms and business service sites. Based in Lagos, Nigeria.",
+    "Frontend developer with 4+ years of experience building responsive web applications using Next.js, React, and JavaScript. Delivered production websites for clients including food delivery platforms and business service sites. Based in Lagos, Nigeria.",
   keywords: [
     "Frontend Developer",
     "Next.js Developer",
@@ -43,14 +44,6 @@ export const metadata = {
     description:
       "Frontend developer specializing in Next.js, React, and modern web technologies. Building fast, responsive web applications. Available for frontend developer roles.",
     siteName: "Folarin Obajenihi Portfolio",
-    images: [
-      {
-        url: "/Folarin.png", // You'll need to create this image
-        width: 1200,
-        height: 630,
-        alt: "Folarin Obajenihi - Frontend Developer"
-      }
-    ]
   },
 
   // Twitter Card metadata
@@ -60,7 +53,6 @@ export const metadata = {
     description:
       "Frontend developer building modern web applications with Next.js, React, and TypeScript. Available for frontend developer roles.",
     creator: "@folaz_web", // Replace with your actual Twitter handle or remove if you don't have one
-    images: ["/Folarin.png"] // Same image as Open Graph
   },
 
   // Additional metadata
@@ -125,9 +117,9 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               name: "Folarin Obajenihi",
               url: "https://folarin-obajenihi.vercel.app",
-              image: "https://folarin-obajenihi.vercel.app/og-image.png",
+              image: "https://folarin-obajenihi.vercel.app/opengraph-image",
               jobTitle: "Frontend Developer",
-              description: "Frontend developer with 3+ years of experience building responsive web applications using Next.js, React, and JavaScript.",
+              description: "Frontend developer with 4+ years of experience building responsive web applications using Next.js, React, and JavaScript.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Lagos",
