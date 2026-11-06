@@ -67,7 +67,7 @@ const projectsData = [
     id: 6,
     title: "Grid Clash",
     description: "A react based tic-tac-toe game with score tracking and reset functionality",
-    image: "/images/projects/preview.png",
+    image: "/images/projects/grid-clash.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/FOLADAVE/Grid-Clash",
     previewUrl: "https://grid-clash-nine.vercel.app/",
